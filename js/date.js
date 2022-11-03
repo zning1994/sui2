@@ -18,7 +18,7 @@ export function greet() {
   let greet = Math.floor(currentTime.getHours() / 6);
   switch (greet) {
     case 0:
-      document.getElementById("header_greet").innerHTML = "Good night 夜深了，早点睡。:)";
+      document.getElementById("header_greet").innerHTML = "Good night 夜深了, 早点睡 :)";
       break;
     case 1:
       document.getElementById("header_greet").innerHTML = "Good morning! 祝今日一切好运！:)";
@@ -27,7 +27,7 @@ export function greet() {
       document.getElementById("header_greet").innerHTML = "Good afternoon! 饮茶了咩？:)";
       break;
     case 3:
-      document.getElementById("header_greet").innerHTML = "Good evening! 放松下，别紧张。:)";
+      document.getElementById("header_greet").innerHTML = "Good evening! 放松下, 别紧张 :)";
       break;
   }
 }
