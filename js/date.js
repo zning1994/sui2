@@ -10,7 +10,7 @@ export function date() {
   const time = currentDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', hour12: false});
   const timezone = currentDate.getTimezoneOffset()/(-60);
   const symbol = timezone>0 ? '+' : '-';
-  document.getElementById("header_date").innerHTML = `<span class="date">${date}</span><span class="time">当前本地时间：${time} (UTC${symbol}${timezone}) </span>`;
+  document.getElementById("header_date").innerHTML = `<span class="date">${date}</span><span class="time">本地时间: ${time} (UTC${symbol}${timezone}) </span>`;
 }
 
 export function greet() {
