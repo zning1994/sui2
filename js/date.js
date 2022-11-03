@@ -6,9 +6,11 @@ export function date() {
     month: "long",
     day: "numeric",
   };
-  let date = currentDate.toLocaleDateString("en-GB", dateOptions);
+  let date = currentDate.toLocaleDateString("zh-Hans-CN", dateOptions);
   const time = currentDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', hour12: false});
-  document.getElementById("header_date").innerHTML = `<span class="date">${date}</span><span class="time">${time}</span>`;
+  const timezone = currentDate.getTimezoneOffset()/(-60);
+  const symbol = timezone>0 ? '+' : '-';
+  document.getElementById("header_date").innerHTML = `<span class="date">${date}</span><span class="time">UTC${symbol}${timezone} ${time} </span>`;
 }
 
 export function greet() {
@@ -16,16 +18,16 @@ export function greet() {
   let greet = Math.floor(currentTime.getHours() / 6);
   switch (greet) {
     case 0:
-      document.getElementById("header_greet").innerHTML = "Good night :)";
+      document.getElementById("header_greet").innerHTML = "Good night 夜深了, 早点睡 :)";
       break;
     case 1:
-      document.getElementById("header_greet").innerHTML = "Good morning :)";
+      document.getElementById("header_greet").innerHTML = "Good morning! 祝今日一切好运! :)";
       break;
     case 2:
-      document.getElementById("header_greet").innerHTML = "Good afternoon :)";
+      document.getElementById("header_greet").innerHTML = "Good afternoon! 饮茶了咩？:)";
       break;
     case 3:
-      document.getElementById("header_greet").innerHTML = "Good evening :)";
+      document.getElementById("header_greet").innerHTML = "Good evening! 放松下, 别紧张 :)";
       break;
   }
 }
