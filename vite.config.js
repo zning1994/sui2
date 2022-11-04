@@ -30,9 +30,9 @@ try {
 }
 
 const manifest = {
-  "name": WEBMANIFEST_NAME || "SUI2",
-  "short_name": WEBMANIFEST_SHORT_NAME || "sui2",
-  "description": WEBMANIFEST_DESCRIPTION || "a startpage for your server and / or new tab page",
+  "name": WEBMANIFEST_NAME || "个人门户 Personal Portal",
+  "short_name": WEBMANIFEST_SHORT_NAME || "Personal Portal",
+  "description": WEBMANIFEST_DESCRIPTION || "Personal Portal",
   "icons": [
     {
       "src": "icon-512.png",
